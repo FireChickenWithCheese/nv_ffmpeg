@@ -12,6 +12,8 @@ Reference Version
 3. FFmpeg Version : 4.2.2
 4. Microsoft Visual Studio 2015
 
+Changes
+
 libavcodec\cuviddec.c
 
 /* 
