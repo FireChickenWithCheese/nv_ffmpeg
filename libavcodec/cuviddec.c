@@ -444,9 +444,9 @@ static int cuvid_decode_packet(AVCodecContext *avctx, const AVPacket *avpkt)
     }
 
     /* 
-    20200106 lcj
-    LowLatency
-    Set flag CUVID_PKT_ENDOFPICTURE to signal that a complete packet has been sent to decode
+        20200106 lcj
+        LowLatency
+        Set flag CUVID_PKT_ENDOFPICTURE to signal that a complete packet has been sent to decode
     */
     cupkt.flags |= CUVID_PKT_ENDOFPICTURE;
 

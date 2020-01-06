@@ -12,9 +12,14 @@ Reference Version
 3. FFmpeg Version : 4.2.2
 4. Microsoft Visual Studio 2015
 
-\ffmpeg\libavcodec\cuviddec.c
+libavcodec\cuviddec.c
 
-cupkt.flags = cupkt.flags | CUVID_PKT_ENDOFPICTURE; // lcj 20200106
+/* 
+    20200106 lcj
+    LowLatency
+    Set flag CUVID_PKT_ENDOFPICTURE to signal that a complete packet has been sent to decode
+*/
+cupkt.flags |= CUVID_PKT_ENDOFPICTURE;
 
 Compiling for Windows
 
