@@ -68,16 +68,16 @@ Compiling for Windows
 1. Install msys2 from www.msys2.org
 
 2. Clone ffnvcodec
-git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git
+'git clone https://git.videolan.org/git/ffmpeg/nv-codec-headers.git'
 
 3. Clone FFmpeg's public GIT repository
-git clone https://git.ffmpeg.org/ffmpeg.git
+'git clone https://git.ffmpeg.org/ffmpeg.git'
 
 4. Create a folder named nv_sdk in the parent directory of FFmpeg
 
 5. Copy all the header files from
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include
-C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64
+'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\include'
+'C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64'
 
 6. Launch VS2015 x64 Native Tools Command Prompt
 
@@ -87,17 +87,17 @@ C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v10.2\lib\x64
 pacman -S diffutils make pkg-config yasm
 
 9. Add the following paths by running the commands.
-export PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/":$PATH
-export PATH="/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/bin/":$PATH
+'export PATH="/c/Program Files (x86)/Microsoft Visual Studio 14.0/VC/bin/amd64/":$PATH'
+'export PATH="/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v10.2/bin/":$PATH'
 
 10. Goto nv-codec-headers directory and install ffnvcodec
-cd /f/nv_ffmpeg/nv-codec-headers/
-make install PREFIX=/usr
+'cd /f/nv_ffmpeg/nv-codec-headers/'
+'make install PREFIX=/usr'
 
 11. Go to the FFmpeg installation folder and run the following command
-cd ../ffmpeg/
-./configure --enable-nonfree --enable-shared --enable-static --enable-cuda-nvcc --enable-cuvid --enable-nvenc --enable-libnpp --toolchain=msvc --extra-cflags=-I../nv_sdk/include --extra-ldflags=-libpath:../nv_sdk/x64
+'cd ../ffmpeg/'
+'./configure --enable-nonfree --enable-shared --enable-static --enable-cuda-nvcc --enable-cuvid --enable-nvenc --enable-libnpp --toolchain=msvc' '--extra-cflags=-I../nv_sdk/include --extra-ldflags=-libpath:../nv_sdk/x64'
 
 12. Compile the code by executing the following command
-make -j 8
+'make -j 8'
 
